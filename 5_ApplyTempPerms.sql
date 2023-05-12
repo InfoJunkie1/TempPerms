@@ -105,7 +105,7 @@ BEGIN
 				BEGIN
 					IF @IsSQLuser = 1 
 					BEGIN
-						SET @sql = N'raiseerror(''SQL login needs to be created manually'', 18, 1) RETURN -1';
+						SET @sql = N'raiseerror(''SQL login needs to be created manually'', 18, 1)';
 						IF @Debug = 1 PRINT @sql;
 						ELSE EXEC sp_executesql @sql;
 					END
